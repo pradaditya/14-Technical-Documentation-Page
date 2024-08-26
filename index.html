@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Documentation Page</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header><h1><a href="#css_introduction">CSS Documentation Page</a></h1></header>
+        <ul>
+            <li><a class="nav-link" href="#css_introduction">CSS introduction</a></li>
+            <li><a class="nav-link" href="#css_basics">CSS basics</a></li>
+            <li><a class="nav-link" href="#css_box_model">CSS box model</a></li>
+            <li><a class="nav-link" href="#css_display">CSS display</a></li>
+            <li><a class="nav-link" href="#css_font_styling">CSS font styling</a></li>
+            <li><a class="nav-link" href="#css_sourced">CSS sourced</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">        
+        <section class="main-section" id="CSS_introduction">
+            <header>CSS introduction</header>
+            <article>
+                <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML, or XHTML). CSS specifies how elements should be rendered on screen, on paper, in speech, or on other media. As one of the core languages of the open web, CSS is standardized across web browsers according to W3C specifications. Previously, the development of various parts of the CSS specification was done synchronously, allowing versioning of the latest recommendations, such as CSS1, CSS2.1, and CSS3. However, there will no longer be CSS3 or CSS4; now, it is simply referred to as "CSS" with individual CSS modules having version numbers.</p>
+
+                <p>After CSS 2.1, the scope of the specification increased significantly, and progress on different CSS modules started to vary so much that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification and the progress of individual modules. CSS modules now have version numbers, or levels, such as CSS Color Module Level 5. This modular approach allows for more flexible development and quicker updates to various aspects of the CSS language, ensuring optimal compatibility and functionality across different devices and browsers.</p>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_basics">
+            <header>CSS Basics</header>
+            <article>
+                <p>CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?</p>
+
+                <p>Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:</p>
+
+                <pre class="code-container">
+                    <code>p {</code>
+                    <code>color: red;</code>
+                    <code>}</code>
+                </pre>
+
+                <p>Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as style.css in a directory named styles.</p>
+
+                <p>To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read Dealing with files and HTML basics.)</p>
+
+                <ol>
+                    <li>Open your index.html file. Paste the following line in the head (between the <span class="bold">&lt;head&gt;</span> and <span class="bold">&lt;/head&gt;</span> tags):
+                        <pre class="code-container">
+                            <code>&lt;link href="styles/style.css" rel="stylesheet" /&gt;</code>
+                        </pre>
+                    </li>
+                    <li>Save index.html and load it in your browser. You should see something like this:
+                        <img class="image" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png" alt="CSS example">
+                    </li>
+                    <li>Check if your paragraph text is red. If it is, congratulations! Your CSS is working.</li>
+                    <li>Now, let's add some more styles. In your style.css file, add the following code to change the background color and text alignment:
+                        <pre class="code-container">
+                            <code>body {</code>
+                            <code>background-color: #f0f0f0;</code>
+                            <code>text-align: center;</code>
+                            <code>}</code>
+                        </pre>
+                    </li>
+                    <li>Refresh your browser to see the changes. Your webpage should now have a light gray background and centered text.</li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_box_model">
+            <header>CSS box model</header>
+            <article>
+                <p>The CSS box model module defines the height, width, margin, and padding properties, which along with border properties make up the CSS box model.</p>
+
+                <p>Every visible element on a webpage is a box laid out according to the visual formatting model. CSS properties define their size, position, and stacking level, with the box model properties (and others) defining the extrinsic size of each box, and the space around them.</p>
+
+                <p>Each box has a rectangular content area, inside which any text, images, and other content is displayed. The content may be surrounded by padding, a border, and a margin, on one or more sides. The padding is around the content, the border is around the padding, and the margin sits outside the border. The box model describes how these features — the content, padding, border, and margin — work together to create a box as displayed by CSS.</p>
+
+                <img class="image" src="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/boxmodel.png" alt="CSS box model">
+
+                <p>The CSS box model module defines physical (or "page relative") properties such as width and margin-top. Flow-relative properties such as inline-size and margin-block-start (which relate to text direction) are defined in Logical Properties and Values. The box model module is extended by the CSS box sizing module, which introduces the intrinsic size value and enables defining aspect ratios for elements that are auto-sized in at least one dimension.</p>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_display">
+            <header>CSS display</header>
+            <article>
+                <p>The <span class="bold">display</span> property in CSS is a fundamental aspect of web design, used to control the layout of elements on a web page. This property determines how an element is displayed and interacts with other elements. By understanding and utilizing the <span class="bold">display</span> property, developers can create more complex and responsive web designs. The display property can take on various values, each with distinct behaviors that influence the rendering of elements.</p>
+
+                <p>One of the most common values of the <span class="bold">display</span> property is <span class="bold">block</span>. An element with a display value of <span class="bold">block</span> takes up the full width available, starting on a new line. This is typical for elements like <span class="bold">&lt;div&gt;</span>, <span class="bold">&lt;h1&gt;</span>, and <span class="bold">&lt;p&gt;</span>. Block elements allow for margin and padding to be set, making them ideal for defining major sections of a webpage. In contrast, the inline value makes the element sit on the same line as its neighbors, only taking up as much width as necessary. Elements such as <span class="bold">&lt;span&gt;</span>, <span class="bold">&lt;a&gt;</span>, and <span class="bold">&lt;strong&gt;</span> are naturally inline, allowing for text styling without disrupting the flow of content.</p>
+
+                <p>Another crucial value is <span class="bold">inline-block</span>, which combines the properties of both <span class="bold">inline</span> and <span class="bold">block</span> elements. Elements with <span class="bold">display: inline-block</span> sit inline with other content but can have set widths, heights, margins, and paddings, similar to block elements. This value is particularly useful for creating horizontal navigation menus or side-by-side boxes that need precise control over dimensions and spacing.</p>
+
+                <p>Additionally, modern web design often employs <span class="bold">flex</span> and <span class="bold">grid</span> display values for more advanced layouts. The <span class="bold">flex</span> value is part of the Flexbox model, which simplifies the creation of flexible and responsive layouts. Flexbox allows elements to be aligned and distributed within a container, making it easier to build complex grid systems without using floats or positioning. The <span class="bold">grid</span> value, on the other hand, introduces a two-dimensional grid-based layout system, enabling developers to design web pages using rows and columns. This method provides unparalleled control over layout, making it possible to create intricate designs with relatively simple CSS rules.</p>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_font_styling">
+            <header>CSS font styling</header>
+            <article>
+                <p>Font styling in CSS is a vital aspect of web design, as it significantly impacts the readability and aesthetic appeal of a website. Proper font styling ensures that text content is not only legible but also visually engaging, which can enhance user experience. CSS offers a variety of properties to style fonts, including <span class="bold">font-family</span>,<span class="bold">font-size</span>,<span class="bold">font-weight</span>,<span class="bold">font-style</span>,<span class="bold">line-height</span>,<span class="bold">letter-spacing</span>, and <span class="bold">text-transform</span>.</p>
+                
+                <h3>Font Family</h3>
+                <p>The <span class="bold">font-family</span> property specifies the typeface to be used for the text. You can list multiple font families as a fallback mechanism in case the first choice is unavailable. Generic family names like <span class="bold">serif</span>, <span class="bold">sans-serif</span>, and <span class="bold">monospace</span> are also commonly used.</p>
+                <pre class="code-container">
+                    <code>p {</code>
+                    <code>font-family: "Arial", "Helvetica", sans-serif;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Font Size</h3>
+                <p>The <span class="bold">font-size</span> property controls the size of the text. Sizes can be set using various units like pixels <span class="bold">(px)</span>, em units <span class="bold">(em)</span>, rem units <span class="bold">(rem)</span>, percentages <span class="bold">(%)</span>, and more. The use of relative units like <span class="bold">em</span> and <span class="bold">rem</span> is encouraged for better scalability and responsiveness.</p>
+                <pre class="code-container">
+                    <code>h1  {</code>
+                    <code>font-size: 2em;</code>
+                    <code>}</code>
+                    <code>p   {</code>
+                    <code>font-size: 16px;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Font Weight</h3>
+                <p>The <span class="bold">font-weight</span> property defines the thickness of the text. Common values include <span class="bold">normal</span>, <span class="bold">bold</span>, <span class="bold">bolder</span>, and <span class="bold">lighter</span>, or numeric values ranging from <span class="bold">100</span> to <span class="bold">900</span>.</p>
+                <pre class="code-container">
+                    <code>strong  {</code>
+                    <code>font-weight: bold;</code>
+                    <code>}</code>
+                    <code>header   {</code>
+                    <code>font-weight: 700;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Font Style</h3>
+                <p>The <span class="bold">font-style</span> property is used to make text italic or oblique. The most common values are normal, italic, and oblique.</p>
+                <pre class="code-container">
+                    <code>em  {</code>
+                    <code>font-style: italic;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Line Height</h3>
+                <p>The <span class="bold">line-height</span> property sets the amount of space between lines of text. This property is crucial for improving readability, especially in paragraphs.</p>
+                <pre class="code-container">
+                    <code>p  {</code>
+                    <code>line-height: 1.5;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Letter Spacing</h3>
+                <p>The <span class="bold">letter-spacing</span> property controls the space between characters. Adjusting letter spacing can enhance the readability and aesthetic of the text.</p>
+                <pre class="code-container">
+                    <code>h1  {</code>
+                    <code>letter-spacing: 2px;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Text Transform</h3>
+                <p>The <span class="bold">text-transform</span> property alters the case of the text. Common values include <span class="bold">uppercase</span>, <span class="bold">lowercase</span>, and <span class="bold">capitalize</span>.</p>
+                <pre class="code-container">
+                    <code>header  {</code>
+                    <code>text-transform: uppercase;</code>
+                    <code>}</code>
+                </pre>
+
+                <h3>Combining Font Properties</h3>
+                <p>For concise and efficient styling, you can combine several font properties using the shorthand font property. This shorthand can include <span class="bold">font-style</span>, <span class="bold">font-variant</span>, <span class="bold">font-weight</span>, <span class="bold">font-size</span>, <span class="bold">line-height</span>, and <span class="bold">font-family</span>.</p>
+                <pre class="code-container">
+                    <code>p  {</code>
+                    <code>font: italic small-caps bold 16px/1.5 "Georgia", serif;</code>
+                    <code>}</code>
+                </pre>
+            </article>
+        </section>
+        <section class="main-section" id="Source">
+            <header>Source</header>
+            <article>
+                <p>All content in this article is sourced from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs</a>."</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
